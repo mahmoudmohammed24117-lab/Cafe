@@ -1,375 +1,408 @@
+/* General Layout Styles */
 *{
-    padding: 0px;
-    margin: 0px;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; /* تمنع خروج العناصر بره الشاشة */
 }
-nav{
+
+body{
+    background-color: black;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+    overflow-x: hidden; /* تمنع الاسكرول العرضي المزعج */
+}
+
+/* Navigation Bar */
+.navbar {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    align-items: flex-start;
-    height: 50px;
+    align-items: center;
+    height: 60px;
     background-color: #d4ad82;
     position: fixed;
     z-index: 9999;
     width: 100%;
-    
-    
-    
+    top: 0;
 }
-#one{
+
+.nav-logo {
     width: 20%;
-    
 }
-body{
-    background-color: black;
-    color: white;
-    padding: 20PX red dashed ;
-    position: relative;
-   
-    
-}
-#two{
+
+.nav-links {
     width: 50%;
-    margin: 20px;
 }
-a{
+
+.nav-links a {
+    color: black;
     text-decoration: none;
-    margin: 20px;
+    margin: 0 15px;
+    font-weight: 500;
 }
-header{
+
+.nav-links a:visited {
+    background-color: transparent; /* شلت الخلفية الحمراء عشان اللينكات متتبهدلش */
+}
+
+.nav-icons {
+    width: 10%;
+    color: blue;
+    text-align: center;
+}
+
+.nav-icons i {
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+/* Header / Hero Section */
+.hero-section {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: space-around;
     align-items: center;
-    margin: 20px;
+    margin: 100px 20px 40px 20px; /* نزلت الهيدر عشان ميتداراش ورا النافبار الثابت */
 }
-#thr{
+
+.hero-content {
     width: 50%;
     font-size: large;
-    
-    
 }
-#fo{
-    width: 25vh;
-    background-size: cover;
-    
+
+.hero-text {
+    margin: 20px 0;
 }
-input{
+
+.hero-image {
+    width: 45%;
+    text-align: center;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.search-bar {
     text-align: center;
     background-color: #d4ad82;
     height: 40px;
-}
-.Q{
-    margin: 20px;
-    
-}
-#Z{
     width: 200px;
-}
-#Z:hover{
-        background-color: red;
-        font-size: larger;
-        border: 5px blue solid;
-        width: 500px;
-        border-radius: 20px;
-        transition: all 2s linear;
-       
-    }
-#J{
-    width: 10%;
-    height: auto;
-    color: blue;
-    text-align: center;
-    margin: 10px;
-}
-h2{
-    text-align: center;
-}
-#xx{
-   display: grid;
-   grid-template-columns: auto auto;
-   margin: 30px;
-   
+    border: none;
+    outline: none;
+    transition: all 0.5s ease-in-out;
 }
 
-    
-button{
+.search-bar:hover {
+    background-color: red;
+    font-size: larger;
+    border: 5px blue solid;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 20px;
+}
+
+/* Section Main Titles */
+.section-title {
+    text-align: center;
+    margin: 60px 0 20px 0;
+    font-size: 2.5rem;
+}
+
+.highlight {
+    color: #d4ad82;
+}
+
+/* About Us Section */
+.about-section {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   gap: 30px;
+   margin: 30px;
+   align-items: center;
+}
+
+.about-img-container {
+    text-align: center;
+}
+
+.about-img {
+    background-color: black;
+    max-width: 100%;
+    height: auto;
+}
+
+.about-content {
+    color: white;
+    font-size: x-large;
+}
+
+.about-text {
+    margin: 20px 0;
+}
+
+.learn-more-btn {
     width: 200px;
     background-color: blueviolet;
     height: 40px;
-}    
-
-
-#CC{
-     margin: 50px;
-    
     color: white;
-    font-size: x-large;
-   
+    border: none;
+    cursor: pointer;
+    transition: all 0.5s ease;
 }
-#AA{
-    
-    height: 100vh;
-}
-.h{
-    margin: 40px;
 
-
-}
-#t{
-    background-color: black;
-}
-#o{
-    width: 200px;
-}
-#o:hover{
-    width: 600px;
-     height: 40px;
-     font-size: larger;
+.learn-more-btn:hover {
+    width: 100%;
+    max-width: 400px;
+    font-size: larger;
     border: 5px red solid;
     border-radius: 20px;
-     background-color: chocolate;
-     transition: all 2s linear;
-
+    background-color: chocolate;
 }
-#y{
+
+/* Menu Section */
+.menu-grid {
     display: grid;
-    grid-template-columns: 420px 420px 420px;
-    grid-template-rows: 380px 380px 380px;
-    
-    
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
 }
-.g{
-    
-    
-    background-image: url("./images/coffee-cup-with-sweets-grey.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: bottom;
-    margin: 30px;
-    border: 5px red dashed;
-    
-    
-   
-   
 
+.menu-item {
+    background-image: url("./images/coffee-cup-with-sweets-grey.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 40px 20px;
+    border: 5px red dashed;
+    text-align: center;
+    transition: all 0.3s ease;
 }
-.g:hover{
+
+.menu-item:hover {
     background-color: white;
     color: black;
     border: 8px red solid;
 }
-nav a:visited{
-    background-color: red;
 
-}
-#v{
-    color: #d4ad82;
-}
-#c{
-    margin-top: 40px;
-}
-#three{
-    display: grid;
-    grid-template-columns: auto auto auto;
-    grid-template-rows: auto auto auto;
-    margin-top: 30px;
-    margin: 40px;
-   
-    
-}
-.i{
-   
-    background-color: black;
-    color: white;
-    
-    
-    margin: 5px;
-    border: 3px white solid;
-    text-align: center;
-}
-.i:hover{
+.menu-item button {
+    width: 150px;
+    height: 35px;
     background-color: blueviolet;
-    border-radius: 10px;
-
+    color: white;
+    border: none;
+    margin-top: 10px;
+    cursor: pointer;
 }
-.wid {
-    
+
+/* Products Section */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 20px;
+}
+
+.product-card {
     text-align: center;
     position: relative;
-    margin: 20px;
     border: 1px blueviolet solid;
+    padding: 20px 10px;
 }
-.fg{
-    margin: 10px;
+
+.product-card img {
+    max-width: 100%;
+    height: auto;
 }
-#four{
-    display: grid;
-    grid-template-columns: auto auto auto;
-}
-.bor{
-    border-radius: 50%;
+
+.product-icons {
+    background-color: black;
+    color: white;
+    margin: 5px auto;
+    border: 3px white solid;
     text-align: center;
+    padding: 5px;
+    width: fit-content;
 }
-.uuu{
-    margin: 20px;
+
+.product-icons:hover {
+    background-color: red;
+    color: blue;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.product-icons i {
+    margin: 0 10px;
+}
+
+/* Reviews Section */
+.reviews-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.review-card {
     border: 1px whitesmoke solid;
     border-radius: 10px;
     text-align: center;
+    padding: 20px;
 }
-.xxx{
-    margin: 20px;
-}
-.nn{
-    margin: 20px;
-    text-align: center;
-}
-#five{
-    display: grid;
-    grid-template-columns:50% 50% ;
-}
-#hhhh{
-    background-color: rgb(26, 26,26);
-    
-}
-.ttt{
-    margin: 40px;
-   
-}
-#jjj{
-    text-align: center;
-}
-#sss{
-    text-align: center;
-    
 
+.review-user-img {
+    border-radius: 50%;
+    margin: 15px 0;
 }
-#rrr:hover{
-   
+
+.review-text-content {
+    margin: 10px 0;
+}
+
+/* Contact Section */
+.contact-section {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin: 20px;
+}
+
+.map-container {
+    text-align: center;
+}
+
+.map-img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #d4ad82;
+}
+
+.form-container {
+    background-color: rgb(26, 26, 26);
+    padding: 40px;
+}
+
+.form-heading {
+    text-align: center;
+}
+
+.input-group {
+    margin: 30px 0;
+    display: flex;
+    align-items: center;
+    background-color: black;
+    border: 1px solid #555;
+    padding: 10px;
+}
+
+.input-group label {
+    margin-right: 15px;
+    color: #d4ad82;
+}
+
+.input-field {
+    background-color: transparent;
+    color: white;
+    border: none;
+    outline: none;
+    width: 100%;
+}
+
+.submit-btn-container {
+    text-align: center;
+}
+
+.submit-btn {
+    width: 200px;
+    background-color: blueviolet;
+    height: 40px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.submit-btn:hover {
     background-color: chartreuse;
+    color: black;
     border-radius: 10px;
 }
-.ll{
+
+/* Footer Section */
+.footer-section {
     background-color: black;
     color: white;
-}
-.zzzz{
-    border-radius: 50%;
+    padding: 40px 20px;
     text-align: center;
-    text-decoration: none;
-    
+}
 
+.social-links {
+    margin-bottom: 20px;
 }
-#xxxxx{
-    text-align: center;
+
+.social-icon-link {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.social-img {
+    border-radius: 50%;
+}
+
+.footer-credits {
     font-size: x-large;
 }
-footer{
-    background-color: black;
-    color: white;
-}
-#yuy{
-    text-align: center;
-}
-.i:hover{
-    background-color: red;
-    color: blue;
-}
-#yuy{
-    text-align: center;
-}
-.yu{
-    border-radius: 50%;
-}
 
-
-
-
-
-
-
-
-
+/* Media Queries for Perfect Responsiveness */
 @media (max-width: 1200px) {
-    nav {
+    .navbar {
         flex-direction: column;
         align-items: center;
         height: auto;
+        padding: 10px 0;
     }
-    #two {
+    .nav-logo, .nav-links, .nav-icons {
         width: 100%;
-        margin: 10px 0;
         text-align: center;
+        margin: 5px 0;
     }
-    #J {
-        width: 100%;
-        margin: 10px 0;
-    }
-    header {
+    .hero-section {
         flex-direction: column;
-        align-items: center;
-        margin: 10px;
+        margin-top: 180px;
     }
-    #thr {
-        width: 80%;
+    .hero-content, .hero-image {
+        width: 100%;
         text-align: center;
     }
-    #fo {
-        width: 60%;
-        margin-top: 20px;
-    }
-    #xx {
-        grid-template-columns: auto;
-        margin: 20px;
-    }
-    #y {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto;
-    }
-    #three {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto;
-        margin: 20px;
-    }
-    #four {
-        grid-template-columns: 1fr 1fr;
-    }
-    #five {
+    .about-section {
         grid-template-columns: 1fr;
+    }
+    .menu-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .reviews-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .contact-section {
+        grid-template-columns: 1fr;
+        gap: 20px;
     }
 }
 
 @media (max-width: 768px) {
-    nav {
-        padding: 10px 0;
-    }
-    #one {
-        width: 50%;
-        text-align: center;
-        margin-bottom: 10px;
-    }
-    #two {
-        width: 100%;
+    .nav-links {
         display: flex;
         flex-direction: column;
-        align-items: center;
     }
-    #two a {
+    .nav-links a {
         margin: 5px 0;
     }
-    header {
-        flex-direction: column;
-    }
-    #thr {
-        width: 90%;
-        font-size: medium;
-    }
-    #fo {
-        width: 80%;
-        height: auto;
-    }
-    #y {
+    .menu-grid, .products-grid, .reviews-container {
         grid-template-columns: 1fr;
-        grid-template-rows: auto;
- }
- }
+    }
+}
