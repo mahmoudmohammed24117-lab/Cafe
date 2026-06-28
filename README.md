@@ -4,6 +4,14 @@
 
 👉 **[View Live Website](https://mahmoudmohammed24117-lab.github.io/Cafe/)**
 
+
+## 📸 Preview
+
+<p align="center">
+  <img src="home.png" alt="Project Preview" width="900">
+</p>
+
+
 A modern and responsive Cafe Website built using **HTML** and **CSS**.
 
 ## 🚀 Features
